@@ -43,3 +43,15 @@ for d in data:
 		good.append(d)
 print('一共有', len(good), '筆提到good')
 print(good[0])
+
+#篩選快寫法
+good = [d for d in data if 'good' in d]  #d=印出原始資料
+#good = [1 for d in data if 'good' in d] #把資料轉換成1
+print(good)
+
+bad = ['bad' in d for d in data]   #'bad' in d 是一個運算，提到bad = true or false 
+print(bad)
+
+#bad = []
+#for d in data:
+#	bad.append('bad' in d')
