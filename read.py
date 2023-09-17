@@ -6,9 +6,22 @@ with open ('reviews.txt', 'r') as f:
 		count += 1
 		if count % 1000 == 0:             # %= 把count 跟 1000 求於數
 		    print('第', len(data), '筆')
-print(len(data))
+print('檔案讀取完成,總共有', len(data), '筆資料')
+
+
+
+
 
 #print(data)           #印出全部留言
-print(data[0])        #印出第一筆留言
-print('----------------------')
-print(data[1])
+#print(data[0])        #印出第一筆留言
+#print('----------------------')
+#print(data[1])
+
+
+#求全部留言的全部長度
+sum_len = 0
+for d in data:
+	sum_len = sum_len + len(d)
+#	print(sum_len)
+
+print('留言的平均長度為', sum_len/len(data))
